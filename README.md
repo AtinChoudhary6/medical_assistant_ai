@@ -137,26 +137,47 @@ Users can upload medical PDFs and ask questions in plain English. The assistant 
 ```bash
 medical-assistant-ai/
 │
-├── main.py
-├── logger.py
+├── backend/
+│   │
+│   ├── main.py
+│   ├── logger.py
+│   │
+│   ├── middleware/
+│   │   └── exception_handlers.py
+│   │
+│   ├── routes/
+│   │   ├── upload_pdfs.py
+│   │   └── ask_question.py
+│   │
+│   ├── services/
+│   │   ├── pdf_handler.py
+│   │   ├── vectorstore.py
+│   │   ├── query_handler.py
+│   │   └── llm.py
+│   │
+│   ├── uploaded_docs/
+│   │
+│   └── requirements.txt
 │
-├── middleware/
-│   └── exception_handlers.py
+├── client/
+│   │
+│   ├── app.py
+│   ├── config.py
+│   │
+│   ├── components/
+│   │   ├── upload_section.py
+│   │   ├── chat_section.py
+│   │   └── sidebar.py
+│   │
+│   ├── utils/
+│   │   └── api_client.py
+│   │
+│   └── requirements.txt
 │
-├── routes/
-│   ├── upload_pdfs.py
-│   └── ask_question.py
-│
-├── modules/
-│   ├── pdf_handler.py
-│   ├── load_vectorstore.py
-│   ├── query_handler.py
-│   └── llm.py
-│
-├── uploaded_docs/
-├── requirements.txt
-└── .env
-```
+├── .env
+├── .gitignore
+├── README.md
+└── LICENSE
 ---
 
 ## 🎯 Key Engineering Highlights
