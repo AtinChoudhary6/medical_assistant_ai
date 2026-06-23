@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+python-multipart
+python-dotenv
+langchain
+langchain-community
+langchain-groq
+langchain-google-genai
+langchain-pinecone
+langchain-text-splitters
+pinecone
+pypdf
